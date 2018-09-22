@@ -10,7 +10,7 @@ var OrbitControls = require("three-orbit-controls")(THREE);
 
 export class ThreeScene extends Component {
   componentDidMount() {
-    this.optimizer = { scale: 0 };
+    this.optimizer = { scale: 0, counter: 0 };
 
     this.scene = new THREE.Scene();
     //this.scene.background = new THREE.Color(0xcccccc);
@@ -142,12 +142,14 @@ export class ThreeScene extends Component {
   animate = () => {
     this.renderScene();
     this.frameId = window.requestAnimationFrame(this.animate);
-    this.counter++;
-    if (this.counter == 1) {
-      this.counter = 0;
+
+    if (this.optimizer.counter === 10) {
+      this.optimizer.counter = 0;
 
       if (this.optimizer.scale !== this.props.state.options.scale) {
+        console.log("in 1");
         for (var i = 0; i < this.group.children.length; i++) {
+          console.log("in 2");
           this.group.children[i].scale.setX(this.props.state.options.scale);
           this.group.children[i].scale.setY(this.props.state.options.scale);
           this.group.children[i].scale.setZ(this.props.state.options.scale);
@@ -155,6 +157,7 @@ export class ThreeScene extends Component {
         }
       }
     }
+    this.optimizer.counter++;
     this.scene.rotation.x += this.props.state.options.velx;
     this.scene.rotation.y += this.props.state.options.vely;
 

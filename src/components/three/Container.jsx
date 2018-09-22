@@ -77,8 +77,9 @@ export class Container extends Component {
 
   onChangeScale(newValue) {
     this.setState({ valueScale: newValue }, function() {
-      this.state.options.scale = (this.state.valueScale - 50) / 100 + 1;
+      this.state.options.scale = (this.state.valueScale - 50) / 50 + 1;
     });
+    console.log("this.state.options.scale "+this.state.options.scale);
   }
 
   onChangeReload = () => {
