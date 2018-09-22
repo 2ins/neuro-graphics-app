@@ -1,0 +1,20 @@
+#my-gui-container {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: #ff0000;
+  left: 50px;
+  top: 50px;
+}
+#iframe-goes-in-here iframe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+#my-gui-container {
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  z-index: 10;
+}

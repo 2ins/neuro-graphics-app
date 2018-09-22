@@ -1,0 +1,48 @@
+.nav > li {
+  position: relative;
+  display: block;
+}
+.navbar-default {
+  background-color: #2892d7;
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+.navbar-header.navigation {
+  background: #2892d7;
+}
+.navbar .navbar-default {
+  background-color: #2892d7;
+}
+nav.navbar .navbar-default {
+  background-color: #2892d7;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-brand > li > a > a {
+  color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  border-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+  text-decoration: none;
+}
